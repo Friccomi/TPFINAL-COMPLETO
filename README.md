@@ -33,7 +33,7 @@
 
 ## Others:
    A video showing deployment of the infrastructure, results and QuickSight
-      ![Esta es una imagen](https://github.com/Friccomi/TPFINAL-COMPLETO/blob/master/Video-TP-Final.mp4)
+      https://drive.google.com/file/d/1q6znLdf0sjSXuOSmUAYCtxvFCkJRI93r/view?usp=sharing
 
 ## Install Airflow on EKS.
 
