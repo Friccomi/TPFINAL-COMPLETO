@@ -139,7 +139,7 @@
       
 23- On Airflow:
 
-	a) Go to Admin --> Connections. Create a new connection as follow:
+        a) Go to Admin --> Connections. Create a new connection as follow:
             Conn id: postgres_default
             Conn Type: Postgres
             Host: airflow.c1ar3u4sy3fm.us-east-1.rds.amazonaws.com    # DB endpoint
