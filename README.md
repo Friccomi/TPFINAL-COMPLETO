@@ -32,8 +32,8 @@
 ![Esta es una imagen](https://github.com/Friccomi/TPFINAL-COMPLETO/blob/master/Infra.jpg)
 
 ## Others:
-   A video showing the infrastructure deploy is included
-      
+   A video showing deployment of the infrastructure, results and QuickSight
+      ![Esta es una imagen](https://github.com/Friccomi/TPFINAL-COMPLETO/blob/master/Video-TP-Final.mp4)
 
 ## Install Airflow on EKS.
 
