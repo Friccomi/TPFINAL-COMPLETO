@@ -158,6 +158,8 @@
         
             (aws_access_key_id and aws_secret_access_key)
 
+24- On s3://friccomi/tp/, you'll find graphics/ and result/.
+
 ## Install Dashboard.
 
 ##QuickSight
