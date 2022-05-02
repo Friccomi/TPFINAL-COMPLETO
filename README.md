@@ -9,7 +9,7 @@
    
 ## Architecture:
    - VPC.
-   - Two Availabe zones
+   - Two Available zones
    - For each zones: one public subnets, one private subnets, a Nat Gayway, an Elastic IP,a private route table
    - Policys: needed to run all
    - Security groups: ClusterSharedNodeSecurity Group,  ControlPlanelSecurity Group
@@ -22,6 +22,7 @@
    - authorize-security-group-ingress: to have access to DB
    - s3: to save, Cloudformation template, Airflow files, files to be processed and results
    - Git sidecar (https://github.com/Friccomi/ITBA-TPFINAL.git)
+   - QuickSight: dashboard to show results
 
 ## Limits: 
    - Sagemaker has e limit, so it was not possible to process all airports for a year. To be able to run the others jobs, the job Search_unnormals was mark as succeded, even thought it only processed six airports.
