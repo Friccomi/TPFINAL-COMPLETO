@@ -33,7 +33,7 @@
 
 ## Others:
    A video showing deployment of the infrastructure, results and QuickSight
-      https://drive.google.com/file/d/1q6znLdf0sjSXuOSmUAYCtxvFCkJRI93r/view?usp=sharing
+     https://drive.google.com/file/d/1lW78d-LuTdHjqUsDVttz1LNs0aCodJAd/view?usp=sharing
 
 ## Install Airflow on EKS.
 
