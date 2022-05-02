@@ -1,0 +1,14 @@
+echo {
+    "Policy": {
+        "PolicyName": "AmazonEKSClusterAutoscalerPolicy",
+        "PolicyId": "ANPAWVVOBTBDFQFDOLZUX",
+        "Arn": "arn:aws:iam::841487132122:policy/AmazonEKSClusterAutoscalerPolicy",
+        "Path": "/",
+        "DefaultVersionId": "v1",
+        "AttachmentCount": 0,
+        "PermissionsBoundaryUsageCount": 0,
+        "IsAttachable": true,
+        "CreateDate": "2022-02-20T14:47:13+00:00",
+        "UpdateDate": "2022-02-20T14:47:13+00:00"
+    }
+}

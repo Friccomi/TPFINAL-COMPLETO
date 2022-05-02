@@ -1,0 +1,42 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInternetGateways",
+                "rds:Describe*",
+                "rds:ListTagsForResource",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeVpcs",
+                "rds:CreateDBInstance",
+                "ec2:DescribeAccountAttributes",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcAttribute",
+                "rds:CreateDBSubnetGroup",
+                "ec2:DescribeSecurityGroups"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "rds:CreateDBInstance",
+            "Resource": [
+                "arn:aws:rds:*:841487132122:db:*",
+                "arn:aws:rds:*:841487132122:og:*",
+                "arn:aws:rds:*:841487132122:subgrp:*",
+                "arn:aws:rds:*:841487132122:cluster:*",
+                "arn:aws:rds:*:841487132122:secgrp:*",
+                "arn:aws:rds:*:841487132122:pg:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "rds:DescribeDBEngineVersions",
+            "Resource": "*"
+        }
+    ]
+}
