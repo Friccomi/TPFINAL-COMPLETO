@@ -1,10 +1,11 @@
 # ITBA: Final Proyect, Data Cloud Engineer
 
 ## Problem to resolve:
-   - We need to know whitch airports had days with anormal delays.
-   - The data sets has rows with only the airport and no data. Those rows where delete.
-   - The column that has delay time with negative numbers, means the flight took off before the departure time, those number were considered
-     as zero delay.
+   - As a travel agent we are insterest in knowing the more realiable airports, that mean the ones that have least anormal delays departures,
+     so we can recomend them to our clients.
+   - The data sets has some rows with only the airport and no data. Those rows where delete.
+   - The column that has the delay time with negative numbers, means the flight took off before the departure time, those numbers were  
+     considered as zero delay.
    
 ## Architecture:
    - VPC.
@@ -23,8 +24,9 @@
    - Git sidecar (https://github.com/Friccomi/ITBA-TPFINAL.git)
 
 ## Limits: 
-   Sagemaker has e limit, so it was not possible to process all airports for a year. To be able to run the others jobs, the job Search_unnormals
-   was mark as succeded, even thought it only processed six airports.
+   - Sagemaker has e limit, so it was not possible to process all airports for a year. To be able to run the others jobs, the job Search_unnormals was mark as succeded, even thought it only processed six airports.
+   - I couldn't connect postgres RDS to Quicksights, so I extracted the data from DB into a cvs file, and then imported that file to QuickSight.
+   
    
 ## Architecture Diagram:
 ![Esta es una imagen](https://github.com/Friccomi/TPFINAL-COMPLETO/blob/master/Infra.jpg)
@@ -46,12 +48,13 @@
 5- You need know your account number.
 
 6- Replaciong account number: you have to edit this files and replace the account number with your account number.
-	Setup1.sh
+	setup1.sh
 	CreateDBInstance-policy.json
 	EKSDescribeCluster-policy.json
 	API-policy.json
 	Airflow-EKS.yaml
-	Setup2.sh
+	setup2.sh
+	setup6.sh
 
 7- Run : sh setup1.sh
 
@@ -131,6 +134,47 @@
 22- Copy and paste de url showed, to your browser (eg:127.0.0.1:8080)
       user: admin
       password: admin	
+      
+23- On Airflow:
+
+	a) Go to Admin --> Connections. Create a new connection as follow:
+            Conn id: postgres_default
+            Conn Type: Postgres
+            Host: airflow.c1ar3u4sy3fm.us-east-1.rds.amazonaws.com    # DB endpoint
+            Schema: airflow
+            Login: airflow
+            Password: superpassword
+         Save it.      
+         
+        b) Check s3_conn
+            Conn id: s3_conn
+            Conn Type: Postgres
+            Host: 
+            Schema:
+            Login: ASIA4H3EKUXNAJM4SC6B   
+            Password: FFzsjyhJPmkUq0gjpOurhZf0ox9Wdd2PVCQrkvUF    
+        
+            (aws_access_key_id and aws_secret_access_key)
+
+## Install Dashboard.
+
+##QuickSight
+
+1- Sign up with Acount 841487132122
+
+2- Select standard version
+
+3- Use Iam federated identities & QuickSight-manager users
+
+4- Region: us-east-1
+
+5- Account name friccomi
+
+6- Allow access and autodiscovery for these resources: select s3 and Amzon RDS
+
+7- Select dashboard Airport 2010
+
+
 
 
 
