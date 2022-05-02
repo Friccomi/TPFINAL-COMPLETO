@@ -102,7 +102,9 @@
 14- cd aws-airflow-helm
 
 15- Edit values.yaml
+
  	a) Find: airflow--> container image -→respository and replace it with the new ERC repositorie
+	
 	b) Find: "s3://friccomi/Airflow/logs/" and replace name bucket ‘friccomi’ with yout bucket name.
 	b) Find: connections: 
     	  - id: s3_conn
